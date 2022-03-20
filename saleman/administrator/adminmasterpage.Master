@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminmasterpage.master.cs" Inherits="saleman.administrator.adminmasterpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <style type="text/css">
+        .header-design{
+            background:#0099ff;
+            color:white;
+            height:100px;
+            width:100%;
+        }
+        h1{
+            text-align:center;
+        }
+
+        .sidenav {
+          height: 100%;
+          width: 200px;
+          position: fixed;
+          z-index: 1;
+          /*top: 0;
+          left: 0;*/
+          background-color: #003d66;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+
+        .sidenav a {
+          padding: 6px 6px 6px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          display: block;
+        }
+
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+
+        .main {
+          margin-left: 200px; /* Same as the width of the sidenav */
+        }
+        .side-header{
+            margin-top:10px;
+            margin-right:10px;
+            text-align:right;
+        }
+    </style>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header class="header-design">
+                <div class="side-header">
+                    <a class="nav-link" href="/index.aspx">Home</a>
+                </div>
+                <h1> Administrator page</h1>
+            </header>
+            <div class="sidenav">
+              <a href="index.aspx">Dashboard</a>
+              <a href="users.aspx">Users</a>
+              <a href="products.aspx">Products</a>
+              <a href="category.aspx">Add Category</a>
+              <a href="index.aspx">Contact</a>
+              <a href="index.aspx">Logout</a>
+
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

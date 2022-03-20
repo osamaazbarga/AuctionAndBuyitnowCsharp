@@ -1,0 +1,301 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/*import fonts from fonts.css file*/
+@import url(./fonts.css);
+
+/*CSS variables*/
+@import url(./partials/_variables.css);
+
+
+/*import gllobal styling*/
+@import url(./partials/_global.css);
+
+
+/*slider start*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+}*/
+
+.intro {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+.intro-slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* relative to nearest positioned ancestor and not nearest block-level ancestor - alternatively: width: 100vw; */
+    height: 50%; /* relative to nearest positioned ancestor and not nearest block-level ancestor - alternatively: height: 100vh; */
+    object-fit: cover;
+    z-index: -1;
+    /* filter: brightness(50%); */ /* 0% black, 100% original image, values > 100% are allowed for brighter than original image. */
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+/* .intro-slideshow img:first-child {
+  display: block;
+  opacity: 1;
+} */
+.slider .intro-header {
+    border-radius: 0.5rem;
+    padding: 2rem 2.5rem;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.intro h1 {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+}
+
+.intro p {
+    font-size: 1.75rem;
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 12px;
+    }
+
+    .intro-header {
+        padding: 1.5rem 2rem;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        font-size: 1.25rem;
+    }
+}
+
+.site-main {
+    width: 600px;
+    margin: auto;
+}
+
+
+.auto-style1 {
+    margin:30px;
+    padding:30px;
+}
+
+
+
+
+.slider {
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px grey;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    animation: ani 2s linear;
+}
+
+@keyframes ani {
+    0% {
+        transform: scale(1.2);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*slider end*/
+
+
+
+
+
+
+/*start navigation*/
+.header_area .main-menu .navbar .navbar-brand{
+    padding:0 2rem 0 5rem;
+}
+
+.header_area .main-menu .navbar  {
+    padding: 1rem 20rem;
+}
+
+.header_area .main-menu .nav-item .nav-link{
+    font:normal 500 15px/2px var(--andika);
+    text-transform:uppercase;
+    padding:1.7rem;
+    color:var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav .active a {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+
+.header_area .main-menu .navbar-nav a{
+    text-decoration:none;
+}
+
+
+.header_area .main-menu .navbar-nav a:hover {
+    background: var(--gradient-color);
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+}
+
+
+
+
+
+
+/*end navigation*/
+
+
+
+.scrollable-dropdown {
+    height: auto;
+    max-height: 320px; /* Increase / Decrease value as per your need */
+    overflow-x: hidden;
+}
+
+
+/*button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 20px;
+}*/
+
+
+
+/*start category area*/
+
+.cat-area {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+    .cat-area .grid {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .cat-area .grid img {
+
+        float: left;
+        width: 100%;
+        
+        
+    }
+
+
+.cat-area .grid .our-project > .title-h4 {
+    font: normal 700 25px/12px var(--andika);
+    text-transform: lowercase;
+}
+
+.cat-area .grid .our-project .img a:hover img {
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+
+.dlimg a:hover img {
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+/*end category area*/
+
+
+/*start service area*/
+.services-area {
+    padding: 7rem 2rem;
+}
+
+.services-area .services-title {
+    padding: 0 14rem;
+}
+
+.services-area .services-title h1 {
+    font-size: 35px;
+}
+
+.services-area .services {
+    background: rgba(56,56,56,0.11);
+    padding: 2rem 0;
+    margin: 5rem .5rem;
+    transition: box-shadow .7s ease;
+}
+
+.services-area .services img {
+    width:50%;
+}
+
+.services-area .services h5 {
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.services-area .services:hover {
+    box-shadow: var(--box-shadow);
+}
+
+
+/*end service area*/
+
+
+/*start footer area*/
+footer.footer-area {
+    padding:0 5rem;
+}
+
+footer.footer-area a img {
+    width:20%;
+}
+
+footer.footer-area .social h5 {
+    font:normal 500 23px/30px var(--andika);
+}
+
+footer.footer-area .social a>i {
+    font-size:22px;
+    padding: 2rem;
+}
+/*end footer area*/
+
+button {
+    padding: 3px 12px;
+}
+
+.underline {
+
+    text-decoration:none;
+}
